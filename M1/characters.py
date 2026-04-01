@@ -123,7 +123,6 @@ def list_characters():
     
     print(f"\n--- All Characters ({len(characters)}) ---")
     for key, character in characters.items():
-        print(f" - {character['name']} ({character['role']})")
         status = character.get("status", "unknown")
         role = character.get("role", "")
         print(f"   {character['name']} - {role} ({status})")
