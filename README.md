@@ -1,7 +1,7 @@
 # Fantasy World Engine
 
 A modular creative writing world-building, outlining, brainstorming, plotting tool for personal use.
-Built in Python. Designed to grow alongside the world being created.
+Built in Python.
 
 ## Modules
 - M1 — World notebook: characters, locations, lore, magic systems
