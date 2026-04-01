@@ -131,7 +131,7 @@ def world_menu():
         print("  2. Locations")
         print("  3. Lore")
         print("  4. Magic Systems")
-        # print("  5. Naming & Languages")
+        print("  5. Naming & Languages")
         print("  0. Back to worlds")
         
         choice = input("\n  Choose: ").strip()
@@ -144,6 +144,8 @@ def world_menu():
             lore_menu()
         elif choice == "4":
             magic_menu()
+        elif choice == "5":
+            naming_menu()
         elif choice == "0":
             break
         else:
@@ -369,5 +371,42 @@ def magic_menu():
         else:
             print("    Invalid choice.")
 
+def naming_menu():
+    while True:
+        print("\n    --- Naming & Languages ---")
+        print("    1. Add language")
+        print("    2. View language")
+        print("    3. List all languages")
+        print("    4. Edit language")
+        print("    5. Generate names")
+        print("    6. Check a name")
+        print("    0. Back")
+        
+        choice = input("\n    Choose: ").strip()
+        
+        if choice == "1":
+            naming.add_language()
+        elif choice == "2":
+            name = input("    Language name: ")
+            naming.view_language(name)
+        elif choice == "3":
+            naming.list_languages()
+        elif choice == "4":
+            name = input("    Language name to edit: ")
+            naming.edit_language(name)
+        elif choice == "5":
+            lang = input("    Language name: ")
+            name_type = input("    Type (male/female/place): ")
+            count = input("    How many names: ")
+            naming.generate_names(lang, name_type, int(count))
+        elif choice == "6":
+            name = input("    Name to check: ")
+            lang = input("    Language name: ")
+            name_type = input("    Type (male/female/place): ")
+            naming.check_name(name, lang, name_type)
+        elif choice == "0":
+            break
+        else:
+            print("    Invalid choice.")
 
 project_menu()

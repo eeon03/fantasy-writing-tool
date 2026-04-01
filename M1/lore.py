@@ -4,15 +4,15 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import storage
 
 LORE_TYPES = [
-    "faction",
-    "historical event", 
-    "prophecy",
-    "mythology",
-    "cultural tradition",
-    "artifact",
-    "organization",
-    "concept",
-    "other"
+    "Faction",
+    "Historical Event",
+    "Prophecy",
+    "Mythology",
+    "Cultural Tradition",
+    "Artifact",
+    "Organization",
+    "Concept",
+    "Other"
 ]
 
 #add lore
